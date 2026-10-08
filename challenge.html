@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- selocorp® · Cadenzo · meydan okuma sayfası (GitHub Pages, sunucusuz)
+     Yükleme: bu dosyayı cadenzo-legal deposunun köküne challenge.html
+     adıyla koy. Adres: https://selocorpcreator.github.io/cadenzo-legal/challenge.html -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cadenzo Challenge</title>
+<meta property="og:title" content="Cadenzo Challenge 🏁">
+<meta property="og:description" content="Can you beat this time? Accept the challenge in Cadenzo.">
+<style>
+  :root { color-scheme: dark; }
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+         font-family: -apple-system, Segoe UI, Roboto, sans-serif; color:#fff;
+         background: linear-gradient(135deg,#0b0c10 0%,#1a1c22 55%,#3a1606 100%); }
+  .card { width:min(420px,92vw); padding:28px 24px; border-radius:28px; background:rgba(21,22,26,.92);
+          border:1px solid rgba(252,76,2,.35); box-shadow:0 20px 60px rgba(0,0,0,.5); text-align:center; }
+  .brand { letter-spacing:4px; font-weight:900; font-size:13px; opacity:.9 }
+  .flag { font-size:54px; margin:14px 0 6px }
+  h1 { font-size:24px; margin:4px 0 6px; font-style:italic; font-weight:900 }
+  .who { color:#9097a3; margin-bottom:18px }
+  .stats { display:flex; gap:10px; justify-content:center; margin:8px 0 22px }
+  .stat { flex:1; background:#1e2026; border-radius:16px; padding:12px 6px }
+  .stat b { display:block; font-size:24px; font-variant-numeric:tabular-nums }
+  .stat span { font-size:11px; letter-spacing:1px; color:#9097a3; text-transform:uppercase }
+  a.btn { display:block; padding:15px; border-radius:16px; font-weight:800; text-decoration:none; margin-top:10px }
+  .primary { background:#fc4c02; color:#000 }
+  .secondary { background:transparent; color:#fff; border:1px solid #3a3d46 }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="brand">● CADENZO</div>
+  <div class="flag">🏁</div>
+  <h1 id="title">Challenge</h1>
+  <div class="who" id="who"></div>
+  <div class="stats">
+    <div class="stat"><b id="dist">–</b><span id="distL">km</span></div>
+    <div class="stat"><b id="time">–</b><span id="timeL">time</span></div>
+    <div class="stat"><b id="pace">–</b><span id="paceL">/km</span></div>
+  </div>
+  <a class="btn primary" id="open" href="#">Accept in Cadenzo</a>
+  <a class="btn secondary" id="store" href="https://play.google.com/store/apps/details?id=com.selocorp.cadenzo">Get Cadenzo on Google Play</a>
+</div>
+<script>
+(function () {
+  var tr = (navigator.language || '').toLowerCase().indexOf('tr') === 0;
+  var T = tr ? {
+    title: 'Meydan okuma!', who: function (n, m) { return n + ' seni bu ' + m + ' için yarışa çağırıyor'; },
+    someone: 'Bir arkadaşın', time: 'süre', open: "Cadenzo'da kabul et", store: "Google Play'den indir",
+    bad: 'Bu bağlantı geçersiz.', modes: { outdoor_cycling: 'bisiklet', running: 'koşu', hiking: 'doğa yürüyüşü' }
+  } : {
+    title: 'Challenge!', who: function (n, m) { return n + ' challenges you to this ' + m; },
+    someone: 'A friend', time: 'time', open: 'Accept in Cadenzo', store: 'Get Cadenzo on Google Play',
+    bad: 'This link is not valid.', modes: { outdoor_cycling: 'ride', running: 'run', hiking: 'hike' }
+  };
+  var q = new URLSearchParams(location.search);
+  var m = q.get('m'), d = parseFloat(q.get('d')), t = parseInt(q.get('t'), 10);
+  var n = (q.get('n') || '').slice(0, 30) || T.someone;
+  function clock(s) {
+    var h = Math.floor(s / 3600), mm = Math.floor(s % 3600 / 60), ss = s % 60;
+    var p = function (x) { return (x < 10 ? '0' : '') + x; };
+    return h > 0 ? h + ':' + p(mm) + ':' + p(ss) : mm + ':' + p(ss);
+  }
+  if (!T.modes[m] || !(d > 0) || !(t > 0)) {
+    document.getElementById('title').textContent = T.bad;
+    document.getElementById('open').style.display = 'none';
+    return;
+  }
+  document.getElementById('title').textContent = T.title;
+  document.getElementById('who').textContent = T.who(n, T.modes[m]);
+  document.getElementById('dist').textContent = (d / 1000).toFixed(d % 1000 ? 1 : 0);
+  document.getElementById('time').textContent = clock(t);
+  document.getElementById('timeL').textContent = T.time;
+  document.getElementById('pace').textContent = m === 'outdoor_cycling'
+      ? (d / t * 3.6).toFixed(1) : clock(Math.round(t / (d / 1000)));
+  document.getElementById('paceL').textContent = m === 'outdoor_cycling' ? 'km/h' : '/km';
+  document.getElementById('store').textContent = T.store;
+  var open = document.getElementById('open');
+  open.textContent = T.open;
+  var params = 'm=' + encodeURIComponent(m) + '&d=' + Math.round(d) + '&t=' + t +
+      (q.get('n') ? '&n=' + encodeURIComponent(q.get('n').slice(0, 30)) : '');
+  var store = 'https://play.google.com/store/apps/details?id=com.selocorp.cadenzo';
+  // Android: uygulama yüklüyse açar, değilse Play Store'a düşer.
+  open.href = 'intent://challenge?' + params +
+      '#Intent;scheme=cadenzo;package=com.selocorp.cadenzo;S.browser_fallback_url=' +
+      encodeURIComponent(store) + ';end';
+})();
+</script>
+</body>
+</html>
