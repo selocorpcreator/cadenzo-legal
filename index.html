@@ -56,30 +56,70 @@
 
   <div data-lang="tr" class="active">
     <h1>Cadenzo — Gizlilik Politikası</h1>
-    <div class="updated">Son güncelleme: 22 Eylül 2026</div>
+    <div class="updated">Son güncelleme: 14 Ekim 2026</div>
     <div class="badge">Hesap yok · Reklam yok · Verileriniz cihazınızdan çıkmaz</div>
 
-    <p>Cadenzo, Selo Corp tarafından geliştirilen ücretsiz bir antrenman sayacı uygulamasıdır. Bu sayfa, uygulamanın hangi verilere eriştiğini ve bunlarla ne yaptığını açıklar.</p>
+    <p>Cadenzo, Selo Corp tarafından geliştirilen ücretsiz bir antrenman, aktivite takibi ve beslenme planı uygulamasıdır. Bu sayfa, uygulamanın hangi verilere eriştiğini ve bunlarla ne yaptığını açıklar.</p>
 
     <h2>Özet</h2>
     <div class="card">
-      <p style="margin:0">Cadenzo herhangi bir sunucuya bağlanmaz. Kullanıcı hesabı, reklam ağı, analitik veya izleme kütüphanesi içermez. Uygulamanın eriştiği tüm veriler yalnızca telefonunuzda işlenir ve saklanır; hiçbir zaman cihazınızdan çıkmaz.</p>
+      <p style="margin:0">Cadenzo herhangi bir sunucuya bağlanmaz. Kullanıcı hesabı, reklam ağı, analitik veya izleme kütüphanesi içermez. Uygulama <strong>sağlık ve fitness verilerine</strong> (nabız, antrenmanlar, kalori, vücut ağırlığı, beslenme kayıtları) erişir ve bunları oluşturur; bu verilerin tamamı yalnızca telefonunuzda işlenir ve saklanır, hiçbir zaman Selo Corp'a ya da bir sunucuya gönderilmez, satılmaz ve reklam amacıyla kullanılmaz.</p>
+    </div>
+
+
+    <h2>Sağlık ve fitness verileri</h2>
+    <p>Bu bölüm, Cadenzo'nun eriştiği ve oluşturduğu tüm sağlık ve fitness verilerini; bunlara nasıl erişildiğini, nasıl toplandığını, nasıl kullanıldığını ve nerede saklandığını açıklar.</p>
+    <div class="card">
+      <p style="margin-top:0"><strong>1. Nabız (isteğe bağlı)</strong></p>
+      <ul>
+        <li><strong>Nasıl erişilir:</strong> (a) Bir saat ya da nabız kemeri bağlarsanız, antrenman sırasında cihazın yayınladığı nabız Bluetooth üzerinden okunur. (b) Bir antrenman sayfasında "Nabzı Health Connect'ten al" düğmesine dokunursanız ve izin verirseniz, Health Connect'teki nabız kayıtları <em>yalnızca o antrenmanın başlangıç ve bitiş saatleri arasında</em> okunur (izin: READ_HEART_RATE).</li>
+        <li><strong>Nasıl kullanılır:</strong> Antrenman sırasında canlı nabız ve nabız bölgesini göstermek; antrenman sayfasında ortalama ve en yüksek nabzı, nabız grafiğini ve bölgelerde geçen süreyi göstermek; isterseniz paylaşım görselinde ortalama nabzı göstermek.</li>
+        <li><strong>Nerede saklanır:</strong> İlgili antrenmanla birlikte yalnızca telefonunuzdaki yerel veritabanında.</li>
+      </ul>
+      <p><strong>2. Antrenman ve aktivite verileri</strong></p>
+      <ul>
+        <li><strong>Neler:</strong> Antrenman türü, başlangıç zamanı ve süresi, hareket süresi, mesafe, hız ve tempo, km bölümleri, yükseklik kazancı, GPS rotası (dış mekân modlarında), tamamlanan set/raunt sayısı, kişisel rekorlar ve antrenman notlarınız.</li>
+        <li><strong>Nasıl toplanır:</strong> Siz antrenman yaptıkça uygulama tarafından cihazda hesaplanır; GPS verisi yalnızca dış mekân modlarında kullanılır.</li>
+        <li><strong>Nasıl kullanılır:</strong> Geçmiş, takvim, istatistik, grafik, rekor, seri, rütbe ve haftalık görev hesaplamaları ile sizin oluşturduğunuz paylaşım görselleri.</li>
+      </ul>
+      <p><strong>3. Kalori ve vücut ölçüleri</strong></p>
+      <ul>
+        <li><strong>Neler:</strong> Ayarlarda girdiğiniz vücut ağırlığı ve en yüksek nabız değeri; bunlardan cihazda tahmin edilen yakılan kalori.</li>
+        <li><strong>Nasıl kullanılır:</strong> Yalnızca kalori tahmini ve nabız bölgelerinin hesaplanması için.</li>
+      </ul>
+      <p><strong>4. Beslenme verileri</strong></p>
+      <ul>
+        <li><strong>Neler:</strong> Seçtiğiniz beslenme programı ve başlangıç tarihi, "Yedim" olarak işaretlediğiniz öğünler, yaptığınız besin değişimleri ve öğün saatleriniz.</li>
+        <li><strong>Nasıl kullanılır:</strong> Günlük menüyü, makroları ve tamamlanan günleri göstermek ve seçtiğiniz saatlerde öğün hatırlatması (yerel bildirim) göndermek için.</li>
+      </ul>
+      <p><strong>5. Health Connect'e yazılan veriler (isteğe bağlı)</strong></p>
+      <ul>
+        <li>Ayarlardan açarsanız, tamamlanan her antrenman telefonunuzdaki Health Connect'e (iPhone'da Apple Health) yazılır: antrenman türü, başlangıç ve bitiş zamanı, tahmini kalori ve GPS modlarında toplam mesafe (izinler: WRITE_EXERCISE, WRITE_TOTAL_CALORIES_BURNED, WRITE_DISTANCE).</li>
+      </ul>
+      <p style="margin-bottom:0"><strong>Tüm sağlık ve fitness verileri için geçerli olanlar:</strong></p>
+      <ul style="margin-bottom:0">
+        <li>Yalnızca telefonunuzda saklanır; Selo Corp'a veya herhangi bir sunucuya gönderilmez.</li>
+        <li>Satılmaz; reklam, pazarlama, profil çıkarma ya da kredi değerlendirmesi için kullanılmaz; üçüncü taraflarla paylaşılmaz.</li>
+        <li>Yalnızca yukarıda yazan, kullanıcıya dönük özellikler için kullanılır.</li>
+        <li>Health Connect'ten okunan nabız, adım veya uyku gibi başka hiçbir kayda erişilmez; okuma yalnızca sizin başlattığınız tek bir antrenman aralığıyla sınırlıdır.</li>
+        <li>Verileri istediğiniz zaman silebilirsiniz (bkz. "Veri silme"); Health Connect izinlerini Health Connect ayarlarından geri alabilirsiniz.</li>
+      </ul>
     </div>
 
     <h2>Konum verisi</h2>
-    <p>Dış mekan bisiklet ve koşu modlarını seçtiğinizde, uygulama telefonunuzun GPS'ini kullanarak kat ettiğiniz mesafeyi ve hızınızı hesaplar. Bu hesaplama tamamen cihazınızda yapılır. Konum verisi:</p>
+    <p>Dış mekân bisiklet, koşu ve doğa yürüyüşü modlarını seçtiğinizde, uygulama telefonunuzun GPS'ini kullanarak kat ettiğiniz mesafeyi ve hızınızı hesaplar. Bu hesaplama tamamen cihazınızda yapılır. Konum verisi:</p>
     <ul>
       <li>Hiçbir sunucuya gönderilmez,</li>
       <li>Hiçbir üçüncü tarafla paylaşılmaz,</li>
       <li>Yalnızca antrenman geçmişinizin bir parçası olarak telefonunuzda saklanır.</li>
     </ul>
-    <p>Konum izni yalnızca bu iki modda istenir; diğer modlar (interval, tabata, ağırlık, kronometre vb.) konum kullanmaz.</p>
+    <p>Konum izni yalnızca bu modlarda istenir; diğer modlar (interval, tabata, ağırlık, kronometre vb.) konum kullanmaz.</p>
 
     <h2>Antrenman geçmişi ve ayarlar</h2>
     <p>Tamamladığınız antrenmanlar, süreleri, mesafeleriniz ve tercihleriniz (dil, ses paketi, haftalık hedef gibi) yalnızca telefonunuzdaki yerel bir veritabanında saklanır. Bu verilere Selo Corp dahil hiç kimse erişemez; yalnızca sizin cihazınızda bulunur.</p>
 
     <h2>Bildirimler</h2>
-    <p>Antrenman sırasında ekranınız kapalıyken de sayacın devam edebilmesi için bir bildirim gösterilir. Bu bildirim yalnızca cihazınızda çalışır ve bir veri göndermez.</p>
+    <p>Antrenman sırasında ekranınız kapalıyken de sayacın devam edebilmesi için bir bildirim gösterilir. Beslenme programı başlattıysanız, seçtiğiniz saatlerde öğün hatırlatmaları gösterilir. Bu bildirimler yalnızca cihazınızda oluşturulur ve bir veri göndermez.</p>
 
     <h2>Sesli komutlar</h2>
     <p>Sesli komutlar, telefonunuzun işletim sistemine ait metinden sese (TTS) motorunu kullanır. Bu motor cihazınıza göre değişir; bazı cihazlarda tamamen çevrimdışı çalışırken bazılarında işletim sisteminizin ayarına bağlı olarak ağ tabanlı sesler kullanılabilir. Bu, işletim sisteminizin genel bir özelliğidir — Cadenzo bu süreçte ek bir veri toplamaz veya iletmez.</p>
@@ -87,6 +127,21 @@
     <h2>Müzik kontrolü (Android)</h2>
     <p>Ayarlardan açarsanız, Cadenzo antrenman sırasında çalan müzik uygulamanızı (YouTube Music, Spotify vb.) sistemin standart medya tuşlarıyla duraklatıp devam ettirebilir. Bu işlem herhangi bir veri okumaz ya da iletmez; yalnızca oynat/duraklat/sonraki komutlarını gönderir.</p>
 
+    <h2>Nabız sensörü (isteğe bağlı)</h2>
+    <p>Bir saat ya da nabız kemeri bağlarsanız, Cadenzo antrenman sırasında nabzınızı Bluetooth üzerinden okur ve aktivitenizle birlikte <strong>yalnızca telefonunuzda</strong> saklar. İsterseniz saatinizin Health Connect'e yazdığı nabız verisi de, yalnızca ilgili antrenmanın zaman aralığı için ve sizin onayınızla okunur. Nabız verisi hiçbir sunucuya gönderilmez, reklam ya da profil çıkarma amacıyla kullanılmaz ve üçüncü taraflarla paylaşılmaz. Bluetooth izni konum belirlemek için kullanılmaz.</p>
+    <h2>Paylaşım görselleri ve fotoğraflar</h2>
+    <p>Antrenman paylaşım görselleri tamamen telefonunuzda oluşturulur. Bir görseli yalnızca siz "Paylaş" ya da "Kaydet" dediğinizde, sizin seçtiğiniz uygulamaya gönderilir veya galerinize kaydedilir. Görsele eklemek için seçtiğiniz fotoğraf yalnızca o an görseli oluşturmak için kullanılır; hiçbir yere yüklenmez ve Cadenzo içinde saklanmaz. Rota içeren görsellerde, başlangıç ve bitiş noktalarını (örneğin evinizin yerini) gizleyen seçenek varsayılan olarak açıktır.</p>
+    <h2>Meydan okuma bağlantıları</h2>
+    <p>Bir aktivitede "Meydan oku"ya dokunduğunuzda, Cadenzo yalnızca aktivite türü, mesafe, süre ve isteğe bağlı olarak girdiğiniz adı içeren bir bağlantı oluşturur. Bağlantı yalnızca siz seçtiğiniz uygulamayla gönderdiğinizde paylaşılır; rota, konum veya nabız içermez. Bağlantıyı açan kişi GitHub Pages'te barındırılan statik bir sayfa görür; bu sayfa veri toplamaz, ancak barındırma hizmeti (GitHub) standart sunucu kayıtları tutabilir.</p>
+    <h2>Health Connect ve Apple Health (isteğe bağlı)</h2>
+    <p>Ayarlardan açarsanız, Cadenzo tamamladığınız her antrenmanı telefonunuzdaki sağlık uygulamasına (Android'de Health Connect, iPhone'da Apple Health) kaydeder. Yazılan veriler yalnızca şunlardır: antrenman türü ve adı, başlangıç ve bitiş zamanı, tahmini kalori ve (GPS modlarında) toplam mesafe.</p>
+    <ul>
+      <li>Cadenzo antrenmanlarınızı sağlık uygulamanıza <strong>yazar</strong>. Okuma yalnızca nabız içindir ve isteğe bağlıdır: bir antrenmanda siz istediğinizde, sadece o antrenmanın zaman aralığındaki nabız okunur. Adım, uyku gibi başka hiçbir kayda erişilmez.</li>
+      <li>Bu veriler telefonunuzdaki sağlık deposuna gider; Selo Corp'a veya herhangi bir sunucuya gönderilmez.</li>
+      <li>Reklam, pazarlama ya da profil çıkarma amacıyla kullanılmaz ve üçüncü taraflarla paylaşılmaz.</li>
+      <li>İzni istediğiniz zaman Health Connect / Apple Health ayarlarından geri alabilir, yazılan kayıtları oradan silebilirsiniz.</li>
+    </ul>
+    <p>Cadenzo'nun Health Connect'ten aldığı bilgilerin kullanımı, Kısıtlı Kullanım gereksinimleri dahil <a href="https://support.google.com/googleplay/android-developer/answer/9888170">Health Connect İzinleri politikasına</a> uygundur.</p>
     <h2>Üçüncü taraf kütüphaneler</h2>
     <p>Cadenzo, aşağıdaki açık kaynak bileşenleri kullanır. Hiçbiri veri toplama, reklam veya analitik amacı taşımaz; hepsi cihazınızda yerel olarak çalışır:</p>
     <ul>
@@ -95,6 +150,10 @@
       <li>Metinden sese motoru — işletim sisteminin kendi TTS servisi</li>
       <li>Ses oynatıcı — uygulamayla birlikte gelen ses dosyaları</li>
       <li>Ön plan servisi — bildirim gösterimi için</li>
+      <li>Health Connect / Apple Health köprüsü — yalnızca ayarlardan açılırsa, cihaz üzerinde</li>
+      <li>Ana ekran widget'ı — haftalık ilerlemeyi göstermek için, cihaz üzerinde</li>
+      <li>Yerel bildirimler — öğün hatırlatmaları için, cihaz üzerinde</li>
+      <li>Bluetooth — yalnızca nabız sensörüne bağlanmak için, cihaz üzerinde</li>
     </ul>
     <p>Cadenzo; Google Analytics, Firebase Analytics, Facebook SDK, reklam ağı veya çökme raporlama (crash reporting) SDK'sı gibi hiçbir izleme veya reklam kütüphanesi içermez.</p>
 
@@ -119,30 +178,70 @@
 
   <div data-lang="en">
     <h1>Cadenzo — Privacy Policy</h1>
-    <div class="updated">Last updated: September 22, 2026</div>
+    <div class="updated">Last updated: October 14, 2026</div>
     <div class="badge">No account · No ads · Your data never leaves your phone</div>
 
-    <p>Cadenzo is a free workout timer app developed by Selo Corp. This page explains what data the app accesses and what it does with it.</p>
+    <p>Cadenzo is a free workout, activity tracking and meal planning app developed by Selo Corp. This page explains what data the app accesses and what it does with it.</p>
 
     <h2>Summary</h2>
     <div class="card">
-      <p style="margin:0">Cadenzo does not connect to any server. It has no user accounts, no ad network, no analytics, and no tracking libraries. Everything the app accesses is processed and stored only on your phone, and never leaves your device.</p>
+      <p style="margin:0">Cadenzo does not connect to any server. It has no user accounts, no ad network, no analytics, and no tracking libraries. The app accesses and creates <strong>health and fitness data</strong> (heart rate, workouts, calories, body weight, meal logs); all of it is processed and stored only on your phone, is never sent to Selo Corp or any server, is never sold and is never used for advertising.</p>
+    </div>
+
+
+    <h2>Health and fitness data</h2>
+    <p>This section describes all health and fitness data that Cadenzo accesses or creates: how it is accessed, how it is collected, how it is used and where it is stored.</p>
+    <div class="card">
+      <p style="margin-top:0"><strong>1. Heart rate (optional)</strong></p>
+      <ul>
+        <li><strong>How it is accessed:</strong> (a) If you connect a watch or heart rate strap, the heart rate it broadcasts is read over Bluetooth during a workout. (b) If you tap "Get heart rate from Health Connect" on a workout and grant permission, heart rate records in Health Connect are read <em>only between that workout's start and end time</em> (permission: READ_HEART_RATE).</li>
+        <li><strong>How it is used:</strong> To show live heart rate and heart rate zone during a workout; to show average and maximum heart rate, a heart rate chart and time in each zone on the workout page; and, if you choose, to show your average heart rate on a share image you create.</li>
+        <li><strong>Where it is stored:</strong> Only in the local database on your phone, together with that workout.</li>
+      </ul>
+      <p><strong>2. Workout and activity data</strong></p>
+      <ul>
+        <li><strong>What:</strong> Workout type, start time and duration, moving time, distance, speed and pace, km splits, elevation gain, GPS route (outdoor modes), completed sets/rounds, personal records and your workout notes.</li>
+        <li><strong>How it is collected:</strong> Calculated on your device while you work out; GPS is used only in outdoor modes.</li>
+        <li><strong>How it is used:</strong> History, calendar, statistics, charts, records, streaks, ranks and weekly quests, and share images that you create.</li>
+      </ul>
+      <p><strong>3. Calories and body measurements</strong></p>
+      <ul>
+        <li><strong>What:</strong> The body weight and maximum heart rate you enter in settings, and calories burned estimated from them on your device.</li>
+        <li><strong>How it is used:</strong> Only to estimate calories and calculate heart rate zones.</li>
+      </ul>
+      <p><strong>4. Nutrition data</strong></p>
+      <ul>
+        <li><strong>What:</strong> The meal plan you choose and its start date, meals you mark as "I ate it", food swaps you make and your meal times.</li>
+        <li><strong>How it is used:</strong> To show the daily menu, macros and completed days, and to send meal reminders (local notifications) at the times you choose.</li>
+      </ul>
+      <p><strong>5. Data written to Health Connect (optional)</strong></p>
+      <ul>
+        <li>If you turn it on in settings, each finished workout is written to Health Connect on your phone (Apple Health on iPhone): workout type, start and end time, estimated calories and, for GPS modes, total distance (permissions: WRITE_EXERCISE, WRITE_TOTAL_CALORIES_BURNED, WRITE_DISTANCE).</li>
+      </ul>
+      <p style="margin-bottom:0"><strong>For all health and fitness data:</strong></p>
+      <ul style="margin-bottom:0">
+        <li>It is stored only on your phone and is never sent to Selo Corp or any server.</li>
+        <li>It is never sold, never used for advertising, marketing, profiling or credit decisions, and never shared with third parties.</li>
+        <li>It is used only for the user-facing features described above.</li>
+        <li>Apart from heart rate, no other Health Connect records (such as steps or sleep) are read, and reading is limited to the single workout time range that you start.</li>
+        <li>You can delete it at any time (see "Deleting your data") and revoke Health Connect permissions in Health Connect settings.</li>
+      </ul>
     </div>
 
     <h2>Location data</h2>
-    <p>When you choose the outdoor cycling or running modes, the app uses your phone's GPS to calculate the distance you've covered and your speed. This calculation happens entirely on your device. Location data:</p>
+    <p>When you choose the outdoor cycling, running or hiking modes, the app uses your phone's GPS to calculate the distance you've covered and your speed. This calculation happens entirely on your device. Location data:</p>
     <ul>
       <li>Is never sent to any server,</li>
       <li>Is never shared with any third party,</li>
       <li>Is stored only on your phone, as part of your workout history.</li>
     </ul>
-    <p>Location permission is only requested for these two modes; every other mode (interval, tabata, strength, stopwatch, etc.) never touches location.</p>
+    <p>Location permission is only requested for these modes; every other mode (interval, tabata, strength, stopwatch, etc.) never touches location.</p>
 
     <h2>Workout history and settings</h2>
     <p>Your completed workouts, their durations, distances, and your preferences (language, sound pack, weekly goal, etc.) are stored only in a local database on your phone. No one, including Selo Corp, can access this data — it exists only on your device.</p>
 
     <h2>Notifications</h2>
-    <p>A notification is shown during a workout so the timer can keep running even when your screen is off. This notification runs entirely on your device and does not send any data anywhere.</p>
+    <p>A notification is shown during a workout so the timer can keep running even when your screen is off. If you start a meal plan, meal reminders are shown at the times you choose. These notifications are created entirely on your device and send no data anywhere.</p>
 
     <h2>Voice cues</h2>
     <p>Voice cues use your phone's operating system's own text-to-speech (TTS) engine. This engine varies by device: on some it runs fully offline, while on others it may use network-based voices depending on your OS settings. This is a general feature of your operating system — Cadenzo does not collect or transmit any additional data during this process.</p>
@@ -150,6 +249,21 @@
     <h2>Music control (Android)</h2>
     <p>If enabled in settings, Cadenzo can pause and resume whatever music app you're using (YouTube Music, Spotify, etc.) during a workout, using the standard system media buttons. This does not read or transmit any data — it only sends play/pause/next commands.</p>
 
+    <h2>Heart rate sensor (optional)</h2>
+    <p>If you connect a watch or heart rate strap, Cadenzo reads your heart rate over Bluetooth during workouts and stores it with your activity <strong>only on your phone</strong>. If you choose, heart rate data that your watch writes to Health Connect is also read, only for the time range of that workout and with your permission. Heart rate data is never sent to any server, never used for advertising or profiling, and never shared with third parties. The Bluetooth permission is not used to determine your location.</p>
+    <h2>Share images and photos</h2>
+    <p>Workout share images are created entirely on your phone. An image is only sent to the app you choose, or saved to your gallery, when you tap "Share" or "Save". A photo you pick for an image is used only at that moment to create it; it is never uploaded and is not stored inside Cadenzo. For images with a route, the option that hides the start and end points (for example, where you live) is on by default.</p>
+    <h2>Challenge links</h2>
+    <p>When you tap "Challenge a friend" on an activity, Cadenzo creates a link containing only the activity type, distance, time and, optionally, a name you enter. The link is shared only when you send it with an app you choose; it contains no route, location or heart rate. A person who opens it sees a static page hosted on GitHub Pages; the page collects no data, although the hosting provider (GitHub) may keep standard server logs.</p>
+    <h2>Health Connect and Apple Health (optional)</h2>
+    <p>If you turn it on in settings, Cadenzo saves each finished workout to the health app on your phone (Health Connect on Android, Apple Health on iPhone). The only data written is: workout type and name, start and end time, estimated calories and, for GPS modes, total distance.</p>
+    <ul>
+      <li>Cadenzo <strong>writes</strong> your workouts to your health app. Reading is limited to heart rate and is optional: when you ask for it on a workout, only the heart rate within that workout's time range is read. No other records, such as steps or sleep, are accessed.</li>
+      <li>This data goes to the health store on your phone; it is never sent to Selo Corp or any server.</li>
+      <li>It is not used for advertising, marketing or profiling, and it is not shared with third parties.</li>
+      <li>You can revoke access at any time in Health Connect / Apple Health settings and delete the written records there.</li>
+    </ul>
+    <p>Cadenzo's use of information received from Health Connect adheres to the <a href="https://support.google.com/googleplay/android-developer/answer/9888170">Health Connect Permissions policy</a>, including the Limited Use requirements.</p>
     <h2>Third-party libraries</h2>
     <p>Cadenzo uses the following open-source components. None of them collect data, serve ads, or perform analytics; all run locally on your device:</p>
     <ul>
@@ -158,6 +272,10 @@
       <li>Text-to-speech engine — your OS's own TTS service</li>
       <li>Audio player — sound files bundled with the app</li>
       <li>Foreground service — for showing the notification</li>
+      <li>Health Connect / Apple Health bridge — only if enabled in settings, on device</li>
+      <li>Home screen widget — shows weekly progress, on device</li>
+      <li>Local notifications — for meal reminders, on device</li>
+      <li>Bluetooth — only to connect to a heart rate sensor, on device</li>
     </ul>
     <p>Cadenzo contains no tracking or advertising library of any kind — no Google Analytics, no Firebase Analytics, no Facebook SDK, no ad network, no crash-reporting SDK.</p>
 
